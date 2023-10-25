@@ -35,7 +35,7 @@ class Metropolis:
             ode_solution = odeint(particle_simulator.particle_motion, [current_position, current_velocity], time_points)
             current_position, current_velocity = ode_solution[-1]
 
-            # Probabilistic surface interaction
+            # Probabilistic surface interactions
             if random.random() < surface_interaction_probability:
                 if random.random() < 0.5:
                     # Specular reflection (reverse velocity)
