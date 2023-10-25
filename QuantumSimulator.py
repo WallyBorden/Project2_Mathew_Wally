@@ -32,7 +32,6 @@ class QuantumSimulator:
     def initialize_position_with_rejection_sampling(self):
         while True:
             x = random.uniform(0,1)
-            proposed_position = random.uniform(0, self.box_length)
             acceptance_probability = 2.0 * np.exp(-2.0 * x)
             if random.random() < acceptance_probability:
                 return proposed_position
